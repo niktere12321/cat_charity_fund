@@ -17,13 +17,13 @@
 Примеры запросов к API, варианты ответов и ошибок приведены в документации проекта, доступной по адресу [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 
 ### Технологии
-- Python 3.8.9
+- Python 3.9.13
 - FastAPI 0.78.0
 
 ### Шаблон наполнения файла `cat_charity_fund/.env`
 ```
-APP_TITLE=Фонд QRKot
-APP_DESCRIPTION=Благотворительный фонд поддержки котиков
+APP_TITLE=Приложение QRKot
+APP_DESCRIPTION=Сервис сбора пожертвований для поддержки котиков.
 DATABASE_URL=sqlite+aiosqlite:///./fastapi.db
 SECRET=secret
 FIRST_SUPERUSER_EMAIL=admin@admin.com
