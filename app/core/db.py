@@ -1,7 +1,5 @@
-from datetime import datetime
-
 from app.core.config import settings
-from sqlalchemy import Boolean, Column, DateTime, Integer
+from sqlalchemy import Column, Integer
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm import declarative_base, sessionmaker
@@ -14,15 +12,6 @@ class PreBase:
         return cls.__name__.lower()
 
     id = Column(Integer, primary_key=True)
-
-
-class DonationMixin:
-
-    full_amount = Column(Integer)
-    invested_amount = Column(Integer, default=0)
-    fully_invested = Column(Boolean, default=False)
-    create_date = Column(DateTime, default=datetime.now)
-    close_date = Column(DateTime)
 
 
 Base = declarative_base(cls=PreBase)

@@ -56,7 +56,7 @@ async def create_donation(
 @router.get(
     '/my',
     response_model=list[DonationDBSchema],
-    summary='Список моих пожертвований'
+    summary='Список пожертвований текущего пользователя'
 )
 async def get_user_donations(
     session: AsyncSession = Depends(get_async_session),
@@ -64,6 +64,6 @@ async def get_user_donations(
 ):
     """
     Досутпно для авторизированного пользователя.
-    Посмотреть список моих пожертвований.
+    Посмотреть список пожертвований текущего пользователя.
     """
     return await donation_crud.get_user_donations(user=user, session=session)

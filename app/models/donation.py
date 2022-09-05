@@ -1,9 +1,9 @@
-from sqlalchemy import Column, Text, ForeignKey, Integer
+from sqlalchemy import Column, ForeignKey, Integer, Text
 
-from app.core.db import Base, DonationMixin
+from .union_base import DonationMixin
 
 
-class Donation(DonationMixin, Base):
+class Donation(DonationMixin):
 
     comment = Column(Text)
     user_id = Column(Integer, ForeignKey('user.id'))

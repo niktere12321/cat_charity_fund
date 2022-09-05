@@ -1,9 +1,9 @@
 from sqlalchemy import Column, String, Text
 
-from app.core.db import Base, DonationMixin
+from .union_base import DonationMixin
 
 
-class CharityProject(DonationMixin, Base):
+class CharityProject(DonationMixin):
 
-    name = Column(String(100))
+    name = Column(String(100), unique=True, nullable=False)
     description = Column(Text)
