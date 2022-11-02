@@ -17,8 +17,7 @@
 Примеры запросов к API, варианты ответов и ошибок приведены в документации проекта, доступной по адресу [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 
 ### Технологии
-- Python 3.9.13
-- FastAPI 0.78.0
+Стек технологий: Python 3, FastAPI, SQLAlchemy, Alembic, Pydantic, Uvicorn.
 
 ### Шаблон наполнения файла `cat_charity_fund/.env`
 ```
@@ -58,4 +57,4 @@ uvicorn app.main:app --reload
 ```
 
 ### Автор
-Nikita Terekhov
+Терехов Никита Алексеевич
